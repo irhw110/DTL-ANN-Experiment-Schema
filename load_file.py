@@ -83,8 +83,9 @@ def load_file_dtl(parent, depth, file):
 node = Node()
 file = open("text_dtl.txt", "r")
 load_file_dtl(node, 0 , file)
-print(node.children[''].children['>=2.45'].children['>=1.8'].children['<5.95'].attribute)
-# print_tree(node.children[''], 0)
+node.children[''].setAttribute(node.attribute)
+node = node.children['']
+print_tree(node, 0)
 file.close()
 
 class Neuron:
@@ -189,7 +190,7 @@ def load_file_ann(file):
 
     return rows
 
-file = open("text_ann.txt", "r")
-rows = load_file_ann(file)
-printMatrixMLP(rows)
-file.close()
+# file = open("text_ann.txt", "r")
+# rows = load_file_ann(file)
+# printMatrixMLP(rows)
+# file.close()
